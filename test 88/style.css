@@ -1,0 +1,214 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'poppins',sans-serif;
+}
+
+:root{
+    --bg-colour:#9ab189;
+    --second-bg-colour:;
+    --text-colour:#faede3;
+    --second-text-colour:#000000;
+    --main-colour:#1f2445;
+}
+
+.background-image{
+    background-image: url('./image1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: transparent;
+    border: 1px solid var(--main-colour);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 30px rgba(0,0,0, .5);
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 2.5rem;
+    color: var(--text-colour);
+    font-weight: 600;
+}
+
+.navbar a{
+    font-size: 1.7rem;
+    color: var(--text-colour);
+    font-weight: 500;
+    margin-left: 3.5rem;
+    transition: .3s;
+}
+
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--main-colour);
+}
+
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    padding: 0 9%;
+}
+
+.home-content {
+    max-width: 60rem;
+    position: relative;
+    top: 90px;
+}
+
+.home-content h2{
+    font-size: 5.6rem;
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--text-colour);
+}
+
+.home-content .text-animate{
+    position: relative;
+    width: 32.8rem;
+}
+
+.home-content .text-animate h3{
+    font-size: 3.1rem;
+    font-weight: 700;
+    color: var(--bg-colour);
+}
+
+.home-content p {
+    font-size: 1.6rem;
+    margin: 2rem 0 4rem;
+    color: var(--text-colour);
+}
+
+.home-content .btn-box{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 450px;
+    height: 50px;
+}
+
+.box1 a{
+    display: flex;
+    width: 200px;
+    height: 50px;
+    background: var(--main-colour);
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.box1 a:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+    animation: border-top-right 5s infinite alternate;
+}
+
+.box1 a:after{
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 2px solid white;
+    border-left: 2px solid white;
+    animation: border-bottom-left 5s infinite alternate;
+}
+
+.box1 a:hover {
+    background:var(--main-colour);
+    box-shadow: 0px 0px 10px  rgba(255,255,255,0.6);;
+}
+
+.box2 a{
+    display: flex;
+    width: 200px;
+    height: 50px;
+    background: var(--main-colour);
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.box2 a:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+    animation: border-top-right 5s infinite alternate;
+}
+
+.box2 a:after{
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 2px solid white;
+    border-left: 2px solid white;
+    animation: border-bottom-left 5s infinite alternate;
+}
+
+.box2 a:hover {
+    background:var(--main-colour);
+    box-shadow: 0px 0px 10px  rgba(255,255,255,0.6);;
+}
+
+
+@keyframes border-top-right {
+    0%  {width: 0px;   height: 0px;}
+    25%  {width: 200px;   height: 0px;}
+    50% {width: 200px; height: 48px;}
+    100%{width: 200px; height: 48px;}
+}
+
+@keyframes border-bottom-left{
+    0%  {width: 0px;   height: 0px; opacity: 0;}
+    50%  {width: 0px;   height: 0px; opacity: 0;}
+    50.1%  {width: 0px;   height: 0px; opacity: 1;}
+    75% {width: 200px; height: 0px; opacity: 1;}
+    100%{width: 200px; height: 48px; opacity: 1;}
+}
